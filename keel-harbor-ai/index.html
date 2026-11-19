@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Keel Harbor AI</title>
+<meta name="description" content="Keel Harbor AI: Sovereign AI for the ports of the Southeast">
+<meta property="og:title" content="Keel Harbor AI"><meta property="og:description" content="Keel Harbor AI: Sovereign AI for the ports of the Southeast">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#1B4F9C;--accent-t:#1B4F9C;--on:#FFFFFF;--ink:#0B0D12;--ink2:#3B4150;
+--muted:#6A7080;--paper:#FFFFFF;--soft:#F5F6F8;--line:#E3E6EB;--tint:#E8EDF5;
+--sans:"Inter Tight","Helvetica Neue",Arial,sans-serif;--mono:"Geist Mono",ui-monospace,Menlo,monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}img{max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:24px}
+.ribbon{background:var(--ink);color:#fff;font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:8px 16px}
+nav.top{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;gap:24px;height:64px}
+.logo{height:32px;width:auto;display:block}.wm{font-weight:600;font-size:19px;letter-spacing:-.01em}
+nav.top .links{display:flex;gap:22px;margin-left:auto;font-size:14px;color:var(--ink2)}
+nav.top .links a{text-decoration:none}nav.top .links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--on);text-decoration:none;font-weight:600;font-size:15px;padding:12px 20px;border-radius:999px;border:1px solid var(--accent)}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+header.hero{background:var(--ink);color:#F3F4F6;padding-block:96px 88px;position:relative;overflow:hidden}
+header.hero:after{content:"";position:absolute;inset:auto -10% -40% 40%;height:120%;background:radial-gradient(closest-side,var(--accent),transparent);opacity:.28;pointer-events:none}
+.eyebrow{font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-t)}
+header.hero .eyebrow{color:#C9CDD6}
+header.hero h1{font-weight:300;font-size:clamp(38px,6vw,72px);line-height:1.04;letter-spacing:-.03em;margin:18px 0 22px;max-width:16ch;text-wrap:balance}
+header.hero p.lede{font-size:clamp(18px,2vw,21px);color:#C9CDD6;max-width:58ch;margin:0 0 34px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+section{padding-block:88px}section.alt{background:var(--soft)}
+h2{font-weight:300;font-size:clamp(30px,4vw,46px);letter-spacing:-.02em;line-height:1.1;margin:12px 0 18px;max-width:22ch;text-wrap:balance}
+.sub{color:var(--ink2);max-width:62ch;margin:0 0 40px}
+.plats{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.plat{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:26px}
+.plat .pk{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.plat h3{font-weight:500;font-size:24px;letter-spacing:-.01em;margin:10px 0 10px;color:var(--accent-t)}
+.plat p{margin:0;color:var(--ink2);font-size:15.5px}
+ol.steps{list-style:none;padding:0;margin:0;display:grid;gap:0;border-top:1px solid var(--line)}
+ol.steps li{display:grid;grid-template-columns:72px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.sn{font:500 14px var(--mono);color:var(--accent-t);padding-top:4px}
+ol.steps h4{margin:0 0 4px;font-size:20px;font-weight:500}ol.steps p{margin:0;color:var(--ink2)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:9px 16px;font-size:15px}
+.why{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}
+.quote{font-size:clamp(20px,2.2vw,26px);font-weight:300;line-height:1.35;letter-spacing:-.01em;border-left:3px solid var(--accent);padding-left:22px;margin:0}
+.svs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.sv{background:var(--tint);border-radius:12px;padding:18px}.sv h4{margin:0 0 4px;font-size:16px}.sv p{margin:0;font-size:14.5px;color:var(--ink2)}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:48px}
+.about p{color:var(--ink2);margin:0 0 16px}
+.founder{border:1px solid var(--line);border-radius:14px;padding:26px;background:var(--paper)}
+.founder .nm{font-size:22px;font-weight:500}.founder .tt{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:4px 0 14px}
+.founder p{font-size:15.5px}
+.contact{background:var(--ink);color:#F3F4F6}
+.contact .grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:end}
+.contact h2{max-width:18ch}.contact .lines{display:grid;gap:6px;color:#C9CDD6;font-size:16px}
+.contact .lines a{color:#fff}
+footer{background:var(--ink);color:#8A90A0;border-top:1px solid #222631;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:22px}
+@media (max-width:820px){nav.top .links{display:none}.why,.about{grid-template-columns:1fr}.svs{grid-template-columns:1fr}
+header.hero{padding-block:64px 60px}section{padding-block:64px}ol.steps li{grid-template-columns:48px 1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head>
+<body>
+<div class="ribbon">Demo company, built to show Infinity</div>
+<nav class="top"><div class="wrap"><a href="#top" aria-label="Keel Harbor AI home"><img src="logo.png" alt="Keel Harbor AI" class="logo"></a>
+<div class="links"><a href="#platform">Platform</a><a href="#deploy">How we deploy</a><a href="#sectors">Sectors</a><a href="#about">About</a></div>
+<a class="btn" href="mailto:hello@keel-harbor.example?subject=Request a deployment">Request a deployment</a></div></nav>
+<header class="hero" id="top"><div class="wrap">
+<div class="eyebrow">Forward deployed AI engineering · Savannah, Georgia</div>
+<h1>Sovereign AI for the ports of the Southeast</h1>
+<p class="lede">Keel Harbor AI designs, deploys and runs sovereign AI for ports and logistics. Our engineers work on site with your team and stand the system up inside your own walls.</p>
+<div class="cta"><a class="btn" href="mailto:hello@keel-harbor.example?subject=Request a deployment">Request a deployment</a><a class="btn ghost" href="#platform">See the platform</a></div>
+</div></header>
+<section id="platform"><div class="wrap">
+<div class="eyebrow">The platform</div><h2>Four platforms, one system you own.</h2>
+<p class="sub">Every deployment runs on the same stack: designed, made living, put to work and improved by every run of the operation.</p>
+<div class="plats"><article class="plat"><div class="pk">AI that designs physical AI systems</div><h3>Keel Design</h3><p>One requirement in; a system design, a layered architecture, a live simulation and a proposal out, every choice arriving with the reason behind it.</p></article><article class="plat"><div class="pk">The digital twin of the organisation, as code</div><h3>Keel Ontology</h3><p>The data, logic, actions and rules of an operation in one object model, so people and agents work on one reality inside the customer&#x27;s own walls.</p></article><article class="plat"><div class="pk">Agents that act inside the workflow</div><h3>Keel Pragma</h3><p>The AI layer on the ontology: agents that take governed actions inside the customer&#x27;s workflows, with a person approving every action that matters.</p></article><article class="plat"><div class="pk">Sovereign models that learn from every run</div><h3>Keel Engram</h3><p>Trains the customer&#x27;s own AI models in their weights and in their memory, on premises and air gapped, from every run of the operation.</p></article></div></div></section>
+<section class="alt" id="deploy"><div class="wrap">
+<div class="eyebrow">How we deploy</div><h2>From the first site visit to a system that improves itself.</h2>
+<p class="sub">Our engineers are forward deployed: they sit with the people who run the operation until the system works for them.</p>
+<ol class="steps"><li><span class="sn">01</span><div><h4>Discover</h4><p>We spend time on site with the operator and the people who run the work, and write down what the operation actually needs.</p></div></li><li><span class="sn">02</span><div><h4>Design</h4><p>A complete system design in days: what to sense, where each model runs, what the object model holds, what it costs and who approves every action.</p></div></li><li><span class="sn">03</span><div><h4>Simulate</h4><p>The customer watches the operation run on the design before anything is bought or built.</p></div></li><li><span class="sn">04</span><div><h4>Deploy</h4><p>Our forward deployed engineers stand the platform up inside the customer&#x27;s perimeter, on their hardware or their cloud.</p></div></li><li><span class="sn">05</span><div><h4>Operate</h4><p>Every run of the operation trains the customer&#x27;s own models, so the system gets better the longer it runs.</p></div></li></ol></div></section>
+<section id="sectors"><div class="wrap">
+<div class="eyebrow">Sectors</div><h2>Where we work.</h2>
+<p class="sub">Container and roll on roll off terminals on the Gulf and Atlantic coasts that want truck turn times down without sending their data off site.</p>
+<div class="chips"><span class="chip">Maritime and ports</span><span class="chip">Supply chain and logistics</span></div></div></section>
+<section class="alt" id="why"><div class="wrap why">
+<div><div class="eyebrow">Why Keel Harbor AI</div><h2>Built for operators.</h2><p class="quote">We have planned the yard at 2 in the morning with a vessel early and the gate backed up. Our systems are built for that night.</p></div>
+<div class="svs"><div class="sv"><h4>Inside your walls</h4><p>Models and data run on the customer&#x27;s own hardware or cloud account.</p></div><div class="sv"><h4>Weights you own</h4><p>Open weight models, trained on the customer&#x27;s own operation, owned by the customer.</p></div><div class="sv"><h4>A person approves</h4><p>Every action that matters waits for a named person to approve it.</p></div><div class="sv"><h4>Air gap ready</h4><p>Designed to run disconnected where the operation demands it.</p></div></div></div></section>
+<section id="about"><div class="wrap about">
+<div><div class="eyebrow">About</div><h2>Why we started Keel Harbor AI.</h2><p>Port terminals run on systems that were never designed to talk to each other, and the AI they are offered lives in someone else&#x27;s cloud.</p><p>Keel Harbor puts a living model of the terminal inside the terminal&#x27;s own walls, so the people who run the yard can see it, ask it and trust it.</p></div>
+<div class="founder"><div class="nm">Marcus Okafor</div><div class="tt">Founder and CEO</div><p>Twelve years in terminal operations at East Coast container ports, last as director of yard planning for a terminal moving 1.4 million containers a year.</p></div>
+</div></section>
+<section class="contact" id="contact"><div class="wrap grid">
+<div><div class="eyebrow" style="color:#C9CDD6">Contact</div><h2>Tell us about your operation.</h2>
+<a class="btn" href="mailto:hello@keel-harbor.example?subject=Request a deployment">Request a deployment</a></div>
+<div class="lines"><a href="mailto:hello@keel-harbor.example">hello@keel-harbor.example</a><a href="tel:+19125550177">+1 912 555 0177</a><span>Savannah, Georgia</span></div>
+</div></section>
+<footer><div class="wrap"><span>&copy; 2026 Keel Harbor AI, LLC</span><span>Built on CodeNinja</span></div></footer>
+</body></html>
