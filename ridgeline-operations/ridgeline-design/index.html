@@ -30,7 +30,7 @@ a:focus-visible,.btn:focus-visible,summary:focus-visible{outline:2px solid var(-
 .hero h1{font-size:clamp(38px,6vw,72px);line-height:1.03;margin:16px 0 20px;max-width:17ch}
 .hero p.lede{font-size:clamp(18px,2vw,21px);color:var(--hero-sub);max-width:60ch;margin:0 0 32px}
 .facts{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:34px}
-.facts div{font-size:14px;color:var(--hero-sub)}.facts b{display:block;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--hero-fg);opacity:.75;margin-bottom:2px}
+.facts div{font-size:14px;color:var(--hero-sub)}.facts b{display:block;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--hero-fg);opacity:.75;margin-bottom:2px}.hero.vid .facts div{color:#D0D4DB}.hero.vid .facts b{color:#fff}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
 section{padding-block:84px}section.alt{background:var(--soft)}
 h2{font-size:clamp(30px,4vw,48px);line-height:1.1;margin:10px 0 16px;max-width:24ch}
@@ -73,17 +73,80 @@ footer .base{grid-column:1/-1;display:flex;justify-content:space-between;flex-wr
 @media (max-width:860px){.links{display:none}.split{grid-template-columns:1fr}footer .wrap{grid-template-columns:1fr}
 .hero{padding-block:64px 58px}section{padding-block:62px}ol.steps li{grid-template-columns:48px 1fr}}
 @media (max-width:560px){.loop{grid-template-columns:1fr}}
+.js .rv.pre{opacity:0;transform:translateY(16px)}.js .rv.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}
+.hero.vid{background:#07090C;color:#F4F5F7}.hero.vid .eb{color:#D7DBE2}.hero.vid p.lede{color:#D0D4DB}
+.bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.bgv-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,9,12,.92) 0%,rgba(7,9,12,.72) 45%,rgba(7,9,12,.35) 100%)}
+.hud{position:absolute;top:16px;right:20px;font:500 11px var(--mono);letter-spacing:.12em;color:#E8EBF0;display:flex;align-items:center;gap:8px;z-index:2}
+.hud .rec{width:8px;height:8px;border-radius:50%;background:#E5484D;animation:blink 1.4s infinite}@keyframes blink{50%{opacity:.2}}
+.hud .tc{opacity:.8;margin-left:6px}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:center}
+.panel{background:rgba(12,15,20,.72);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:16px 18px;backdrop-filter:blur(6px);color:#E8EBF0}
+.panel .pk{font:500 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#AEB4BF;display:flex;justify-content:space-between}
+.feed-list{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px;min-height:252px}
+.feed-list li{display:grid;grid-template-columns:62px 58px 1fr;gap:8px;font-size:13px;line-height:1.35;animation:slidein .5s ease}
+@keyframes slidein{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.feed-list .ft{font:12px var(--mono);color:#8E95A2}.feed-list .fk{font:600 10px var(--mono);letter-spacing:.08em;padding-top:2px}
+.k-sense .fk{color:#F5A524}.k-agent .fk{color:var(--accent)}.k-human .fk{color:#4CC38A}.k-learn .fk{color:#B392F0}
+.illus{font:500 11px var(--mono);letter-spacing:.06em;color:var(--muted);margin-top:10px}
+.livebox{border:1px solid var(--line);border-radius:var(--r);background:var(--paper);overflow:hidden;box-shadow:0 18px 50px -24px rgba(0,0,0,.25)}
+[data-live="graph"]{position:relative;display:grid;grid-template-columns:1fr 260px;min-height:420px;color:var(--ink);background:var(--paper)}
+.graph-cv{width:100%;height:420px;cursor:pointer}.graph-info{border-left:1px solid var(--line);padding:18px;font-size:14px;background:var(--soft)}
+.gi-k{font:500 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:12px}.gi-k:first-child{margin-top:0}
+.gi-n{font-family:var(--head);font-size:24px;color:var(--accent-t)}.gi-v{color:var(--ink2);margin-top:2px}
+[data-live="kinetics"]{padding:22px}.kin-head{font-size:15px;color:var(--ink2);margin-bottom:12px}.kin-head b{color:var(--ink)}
+.kin-states{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.kin-s{font:500 12px var(--mono);padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.kin-s.on{background:var(--accent);color:var(--on);border-color:var(--accent)}
+.kin-btns,.bn-btns{display:flex;flex-wrap:wrap;gap:8px}
+.kin-b{font:600 13.5px var(--body);padding:9px 14px;border-radius:var(--r);border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer}
+.kin-b.ghost{background:var(--paper);color:var(--ink);border-color:var(--line)}.kin-b:disabled{opacity:.4;cursor:not-allowed}
+.kin-log{margin-top:14px;display:grid;gap:6px;font-size:14px}.kin-log .ok{color:#1F7A4D}.kin-log .bad{color:#B42318}
+[data-live="desk"]{background:#0F1319;color:#E6E9EE;border-radius:var(--r);overflow:hidden;font-size:14px}
+.desk-top{display:flex;align-items:center;gap:8px;padding:10px 14px;background:#161B23;border-bottom:1px solid #232A35}
+.desk-top .dot{width:10px;height:10px;border-radius:50%}.dot.r{background:#E5484D}.dot.y{background:#F5A524}.dot.g{background:#4CC38A}
+.desk-title{margin-left:8px;font-weight:600}.desk-mem{margin-left:auto;font:500 11px var(--mono);color:#4CC38A}
+.desk-body{display:grid;grid-template-columns:220px 1fr;min-height:430px}
+.desk-side{border-right:1px solid #232A35;padding:12px}.ds-k{font:500 10.5px var(--mono);letter-spacing:.12em;color:#8E95A2;margin-bottom:8px}
+.ds-row{display:flex;justify-content:space-between;padding:8px 10px;border-radius:6px;font-size:13px;color:#C2C8D2}.ds-row span{font:11px var(--mono);color:#7D8592}
+.ds-row.on{background:#1E2530;color:#fff;box-shadow:inset 3px 0 0 var(--accent)}
+.desk-main{padding:16px 18px}.dm-feed{display:grid;gap:8px}
+.dm-ask{background:#1A2029;border-radius:8px;padding:10px 12px}.dm-who{display:block;font:600 11px var(--mono);color:var(--accent);margin-bottom:4px}
+.dm-step{font:12.5px var(--mono);color:#AEB4BF;padding-left:18px;position:relative;animation:slidein .4s ease}
+.dm-step::before{content:"";position:absolute;left:2px;top:6px;width:7px;height:7px;border-radius:50%;border:1.5px solid #6B7380}
+.dm-step.done::before{background:#4CC38A;border-color:#4CC38A}
+.dm-out{font:600 13px var(--mono);color:#fff;border-top:1px solid #232A35;padding-top:8px}
+.dm-grade{display:flex;align-items:center;gap:10px}.dm-k{font:500 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#8E95A2;margin-right:6px}
+.dm-meter{flex:1;height:6px;background:#232A35;border-radius:9px;overflow:hidden;max-width:260px}.dm-meter i{display:block;height:100%;width:0;background:#4CC38A;transition:width 1s ease}
+.dm-why{color:#C2C8D2;font-size:13.5px}.dm-lesson{background:#14261D;border:1px solid #1F4D33;border-radius:8px;padding:10px 12px;color:#C7F0D8;font-size:13.5px}
+[data-live="design"]{padding:20px;background:var(--paper)}.dw{display:grid;gap:12px}
+.dw-k{display:block;font:500 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.dw-req{font-size:15px;min-height:64px}.dw-type::after{content:"▍";color:var(--accent);animation:blink 1s infinite}
+.dw-qs{display:flex;flex-wrap:wrap;gap:6px}.dw-q{font-size:12.5px;padding:5px 10px;border-radius:999px;background:var(--soft);border:1px solid var(--line);animation:slidein .4s ease}
+.dw-r{font-size:14px;padding-left:14px;border-left:3px solid var(--accent);margin:4px 0;animation:slidein .4s ease}
+.dw-stack{display:grid;gap:4px}.dw-lane{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:8px 12px;border-radius:calc(var(--r)/2);background:var(--tint);font-size:13px;animation:slidein .4s ease}
+.dw-lane b{font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent-t)}
+.dw-docs{display:flex;flex-wrap:wrap;gap:6px}.dw-doc{font:500 12px var(--mono);padding:6px 10px;border-radius:6px;background:var(--ink);color:#fff;animation:slidein .4s ease}
+[data-live="bench"]{padding:22px}.bn-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.bn-card{border:1px solid var(--line);border-radius:calc(var(--r)/1.5);padding:12px;font-size:13.5px;transition:all .5s ease;background:var(--paper)}
+.bn-card.merge{transform:scale(.96);border-color:var(--accent);background:var(--tint)}.bn-card.fade{opacity:.25;filter:grayscale(1)}
+.bn-k{display:block;font:500 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.bn-out{margin-top:14px;display:grid;gap:10px}.bn-hint{color:var(--muted);font-size:14px}
+.bn-pr,.bn-re{border-radius:var(--r);padding:16px 18px;animation:slidein .5s ease}.bn-pr{background:var(--ink);color:#fff}.bn-pr .bn-k{color:#AEB4BF}.bn-pr b{font-family:var(--head);font-size:20px;font-weight:600}
+.bn-re{background:var(--tint);border-left:4px solid var(--accent)}
+@media (max-width:980px){.hero-grid{grid-template-columns:1fr}[data-live="graph"]{grid-template-columns:1fr}.graph-info{border-left:0;border-top:1px solid var(--line)}
+.desk-body{grid-template-columns:1fr}.desk-side{display:none}.bn-cards{grid-template-columns:repeat(2,1fr)}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style></head><body>
+</style><script>window.LIVE={"names": {"design": "Ridgeline Design", "ontology": "Ridgeline Ontology", "pragma": "Ridgeline Pragma", "engram": "Ridgeline Engram"}, "company": "Ridgeline Operations", "people": "pit supervisors and maintenance crews", "objects": ["haul truck", "shovel", "haul road", "proximity event", "work order"], "asset": "haul truck", "work": "work order", "alert": "proximity event", "design": "a haul road safety system for an open pit mine", "customer": "Open pit copper operations and semiconductor fabs in Arizona that need models trained on their own process data and run inside their perimeter.", "accent": "#C2410C", "mono": "IBM Plex Mono", "body": "Barlow", "places": ["A mining site in Arizona", "A site on a satellite link", "A site with a new regulator"]}</script><script src="../live.js" defer></script></head><body>
 <div class="ribbon">Demo company, built to show Infinity</div>
 <nav class="top" aria-label="Main"><div class="wrap"><a href="../" aria-label="Ridgeline Operations home" style="text-decoration:none"><img src="../logo.png" alt="Ridgeline Operations" class="logo"></a>
 <div class="links"><a href="../ridgeline-design/" class="on">Ridgeline Design</a><a href="../ridgeline-ontology/" class="">Ridgeline Ontology</a><a href="../ridgeline-pragma/" class="">Ridgeline Pragma</a><a href="../ridgeline-engram/" class="">Ridgeline Engram</a><a href="../insights/" class="">Insights</a><a href="../about/" class="">About</a></div><a class="btn" href="mailto:hello@ridgeline-ops.example?subject=Request%20a%20deployment">Request a deployment</a></div></nav>
 <main>
-<header class="hero"><svg class="tex" viewBox="0 0 1280 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M-50 60 C 200 20, 380 120, 650 70 S 1100 10, 1300 90" fill="none" stroke="#C2410C" stroke-width="1" opacity="0.10"/><path d="M-50 98 C 200 58, 380 158, 650 108 S 1100 48, 1300 128" fill="none" stroke="#C2410C" stroke-width="1" opacity="0.15"/><path d="M-50 136 C 200 96, 380 196, 650 146 S 1100 86, 1300 166" fill="none" stroke="#C2410C" stroke-width="1" opacity="0.20"/><path d="M-50 174 C 200 134, 380 234, 650 184 S 1100 124, 1300 204" fill="none" stroke="#C2410C" stroke-width="1" opacity="0.10"/><path d="M-50 212 C 200 172, 380 272, 650 222 S 1100 162, 1300 242" fill="none" stroke="#C2410C" stroke-width="1" opacity="0.15"/><path d="M-50 250 C 200 210, 380 310, 650 260 S 1100 200, 1300 280" fill="none" stroke="#C2410C" stroke-width="1" opacity="0.20"/><path d="M-50 288 C 200 248, 380 348, 650 298 S 1100 238, 1300 318" fill="none" stroke="#C2410C" stroke-width="1" opacity="0.10"/><path d="M-50 326 C 200 286, 380 386, 650 336 S 1100 276, 1300 356" fill="none" stroke="#C2410C" stroke-width="1" opacity="0.15"/><path d="M-50 364 C 200 324, 380 424, 650 374 S 1100 314, 1300 394" fill="none" stroke="#C2410C" stroke-width="1" opacity="0.20"/><path d="M-50 402 C 200 362, 380 462, 650 412 S 1100 352, 1300 432" fill="none" stroke="#C2410C" stroke-width="1" opacity="0.10"/><path d="M-50 440 C 200 400, 380 500, 650 450 S 1100 390, 1300 470" fill="none" stroke="#C2410C" stroke-width="1" opacity="0.15"/><path d="M-50 478 C 200 438, 380 538, 650 488 S 1100 428, 1300 508" fill="none" stroke="#C2410C" stroke-width="1" opacity="0.20"/></svg><div class="wrap">
+<header class="hero vid"><video class="bgv" data-bg autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="https://muhammadumar89.github.io/infinity/media/aerial_drone_aerial_18563093.mp4" type="video/mp4"></video><div class="bgv-shade"></div><div class="hud" aria-hidden="true"><span class="rec"></span>LIVE · Ridgeline Design<span class="tc" data-tc></span></div><div class="wrap">
 <div class="eb">AI that designs physical AI systems</div><h1>Ridgeline Design</h1>
-<p class="lede"><strong style="color:var(--hero-fg);font-weight:600">Deep domain expertise, on every design.</strong> The hardest part of putting AI into a physical operation is the expertise it takes to design the system. Ridgeline Design brings that expertise to every requirement, from mines to ports to plants, and turns an operator&#x27;s words into a complete system design.</p>
+<p class="lede"><strong style="color:#fff;font-weight:600">Deep domain expertise, on every design.</strong> The hardest part of putting AI into a physical operation is the expertise it takes to design the system. Ridgeline Design brings that expertise to every requirement, from mines to ports to plants, and turns an operator&#x27;s words into a complete system design.</p>
 <div class="cta"><a class="btn" href="mailto:hello@ridgeline-ops.example?subject=Ridgeline Design">Talk to us about Ridgeline Design</a></div>
 <div class="facts"><div><b>Input</b>The operator&#x27;s requirement</div><div><b>Output</b>A complete system design</div><div><b>Delivered</b>Word, PDF and an object model</div></div></div></header>
+<section><div class="wrap"><div class="eb">Watch it work</div><h2>One requirement in, a system design out.</h2><div class="livebox rv" data-live="design"></div><div class="illus">Illustrative, in the vocabulary of mining.</div></div></section>
 <section><div class="wrap"><div class="eb">What it does</div><h2>What Ridgeline Design gives the operation.</h2><div class="cards"><div class="card"><h3 style="font-size:21px">Scope and rollout</h3><p>A scope baseline with phases that carry item counts and gates, and an honest count of which requirements are covered.</p></div><div class="card"><h3 style="font-size:21px">Architecture</h3><p>A layered stack from sources through adapters, one object model, inference tiers and surfaces, with the memory arithmetic that sizes every GPU class.</p></div><div class="card"><h3 style="font-size:21px">Object model</h3><p>Typed objects, properties, status vocabularies and links, packaged for Ridgeline Ontology to stand up as a living system.</p></div><div class="card"><h3 style="font-size:21px">Model and equipment register</h3><p>Open weight models chosen by licence and placement, and the hardware classes they need, including the export control line for the country.</p></div><div class="card"><h3 style="font-size:21px">Simulation and documents</h3><p>A live simulation of the operation, a proposal and a functional specification, all rendered from one reasoned plan.</p></div><div class="card"><h3 style="font-size:21px">Cost</h3><p>Three year ownership against renting the same capacity and against closed models by the token, from public prices.</p></div></div></div></section>
 <section class="alt"><div class="wrap"><div class="eb">How it works</div><h2>How Ridgeline Design works.</h2><ol class="steps"><li><span class="sn">01</span><div><h4>Paste a requirement</h4><p>A port terminal, a haul road, a warehouse: what the operator sent, in their own words.</p></div></li><li><span class="sn">02</span><div><h4>Answer six questions</h4><p>Ridgeline Design asks only for what the requirement leaves out.</p></div></li><li><span class="sn">03</span><div><h4>Read the plan with its reasons</h4><p>Every choice arrives with the reason behind it.</p></div></li><li><span class="sn">04</span><div><h4>Watch the simulation</h4><p>See the layered architecture, then watch the operation run on the design before anything is built.</p></div></li><li><span class="sn">05</span><div><h4>Hand over the specification</h4><p>Word and PDF, ready for the engineers who will build it.</p></div></li><li><span class="sn">06</span><div><h4>Export the object model</h4><p>One package, ready for Ridgeline Ontology to stand up over the customer&#x27;s own systems of record.</p></div></li></ol></div></section>
 <section><div class="wrap"><div class="eb">In mining</div><div class="example"><b>For pit supervisors and maintenance crews</b>Paste the requirement for a haul road safety system for an open pit mine, and Ridgeline Design returns the system design, the architecture, the simulation and the proposal.</div></div></section>

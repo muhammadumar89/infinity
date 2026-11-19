@@ -30,7 +30,7 @@ a:focus-visible,.btn:focus-visible,summary:focus-visible{outline:2px solid var(-
 .hero h1{font-size:clamp(38px,6vw,72px);line-height:1.03;margin:16px 0 20px;max-width:17ch}
 .hero p.lede{font-size:clamp(18px,2vw,21px);color:var(--hero-sub);max-width:60ch;margin:0 0 32px}
 .facts{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:34px}
-.facts div{font-size:14px;color:var(--hero-sub)}.facts b{display:block;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--hero-fg);opacity:.75;margin-bottom:2px}
+.facts div{font-size:14px;color:var(--hero-sub)}.facts b{display:block;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--hero-fg);opacity:.75;margin-bottom:2px}.hero.vid .facts div{color:#D0D4DB}.hero.vid .facts b{color:#fff}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
 section{padding-block:84px}section.alt{background:var(--soft)}
 h2{font-size:clamp(30px,4vw,48px);line-height:1.1;margin:10px 0 16px;max-width:24ch}
@@ -73,12 +73,74 @@ footer .base{grid-column:1/-1;display:flex;justify-content:space-between;flex-wr
 @media (max-width:860px){.links{display:none}.split{grid-template-columns:1fr}footer .wrap{grid-template-columns:1fr}
 .hero{padding-block:64px 58px}section{padding-block:62px}ol.steps li{grid-template-columns:48px 1fr}}
 @media (max-width:560px){.loop{grid-template-columns:1fr}}
+.js .rv.pre{opacity:0;transform:translateY(16px)}.js .rv.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}
+.hero.vid{background:#07090C;color:#F4F5F7}.hero.vid .eb{color:#D7DBE2}.hero.vid p.lede{color:#D0D4DB}
+.bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.bgv-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,9,12,.92) 0%,rgba(7,9,12,.72) 45%,rgba(7,9,12,.35) 100%)}
+.hud{position:absolute;top:16px;right:20px;font:500 11px var(--mono);letter-spacing:.12em;color:#E8EBF0;display:flex;align-items:center;gap:8px;z-index:2}
+.hud .rec{width:8px;height:8px;border-radius:50%;background:#E5484D;animation:blink 1.4s infinite}@keyframes blink{50%{opacity:.2}}
+.hud .tc{opacity:.8;margin-left:6px}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:center}
+.panel{background:rgba(12,15,20,.72);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:16px 18px;backdrop-filter:blur(6px);color:#E8EBF0}
+.panel .pk{font:500 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#AEB4BF;display:flex;justify-content:space-between}
+.feed-list{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px;min-height:252px}
+.feed-list li{display:grid;grid-template-columns:62px 58px 1fr;gap:8px;font-size:13px;line-height:1.35;animation:slidein .5s ease}
+@keyframes slidein{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.feed-list .ft{font:12px var(--mono);color:#8E95A2}.feed-list .fk{font:600 10px var(--mono);letter-spacing:.08em;padding-top:2px}
+.k-sense .fk{color:#F5A524}.k-agent .fk{color:var(--accent)}.k-human .fk{color:#4CC38A}.k-learn .fk{color:#B392F0}
+.illus{font:500 11px var(--mono);letter-spacing:.06em;color:var(--muted);margin-top:10px}
+.livebox{border:1px solid var(--line);border-radius:var(--r);background:var(--paper);overflow:hidden;box-shadow:0 18px 50px -24px rgba(0,0,0,.25)}
+[data-live="graph"]{position:relative;display:grid;grid-template-columns:1fr 260px;min-height:420px;color:var(--ink);background:var(--paper)}
+.graph-cv{width:100%;height:420px;cursor:pointer}.graph-info{border-left:1px solid var(--line);padding:18px;font-size:14px;background:var(--soft)}
+.gi-k{font:500 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:12px}.gi-k:first-child{margin-top:0}
+.gi-n{font-family:var(--head);font-size:24px;color:var(--accent-t)}.gi-v{color:var(--ink2);margin-top:2px}
+[data-live="kinetics"]{padding:22px}.kin-head{font-size:15px;color:var(--ink2);margin-bottom:12px}.kin-head b{color:var(--ink)}
+.kin-states{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.kin-s{font:500 12px var(--mono);padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.kin-s.on{background:var(--accent);color:var(--on);border-color:var(--accent)}
+.kin-btns,.bn-btns{display:flex;flex-wrap:wrap;gap:8px}
+.kin-b{font:600 13.5px var(--body);padding:9px 14px;border-radius:var(--r);border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer}
+.kin-b.ghost{background:var(--paper);color:var(--ink);border-color:var(--line)}.kin-b:disabled{opacity:.4;cursor:not-allowed}
+.kin-log{margin-top:14px;display:grid;gap:6px;font-size:14px}.kin-log .ok{color:#1F7A4D}.kin-log .bad{color:#B42318}
+[data-live="desk"]{background:#0F1319;color:#E6E9EE;border-radius:var(--r);overflow:hidden;font-size:14px}
+.desk-top{display:flex;align-items:center;gap:8px;padding:10px 14px;background:#161B23;border-bottom:1px solid #232A35}
+.desk-top .dot{width:10px;height:10px;border-radius:50%}.dot.r{background:#E5484D}.dot.y{background:#F5A524}.dot.g{background:#4CC38A}
+.desk-title{margin-left:8px;font-weight:600}.desk-mem{margin-left:auto;font:500 11px var(--mono);color:#4CC38A}
+.desk-body{display:grid;grid-template-columns:220px 1fr;min-height:430px}
+.desk-side{border-right:1px solid #232A35;padding:12px}.ds-k{font:500 10.5px var(--mono);letter-spacing:.12em;color:#8E95A2;margin-bottom:8px}
+.ds-row{display:flex;justify-content:space-between;padding:8px 10px;border-radius:6px;font-size:13px;color:#C2C8D2}.ds-row span{font:11px var(--mono);color:#7D8592}
+.ds-row.on{background:#1E2530;color:#fff;box-shadow:inset 3px 0 0 var(--accent)}
+.desk-main{padding:16px 18px}.dm-feed{display:grid;gap:8px}
+.dm-ask{background:#1A2029;border-radius:8px;padding:10px 12px}.dm-who{display:block;font:600 11px var(--mono);color:var(--accent);margin-bottom:4px}
+.dm-step{font:12.5px var(--mono);color:#AEB4BF;padding-left:18px;position:relative;animation:slidein .4s ease}
+.dm-step::before{content:"";position:absolute;left:2px;top:6px;width:7px;height:7px;border-radius:50%;border:1.5px solid #6B7380}
+.dm-step.done::before{background:#4CC38A;border-color:#4CC38A}
+.dm-out{font:600 13px var(--mono);color:#fff;border-top:1px solid #232A35;padding-top:8px}
+.dm-grade{display:flex;align-items:center;gap:10px}.dm-k{font:500 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#8E95A2;margin-right:6px}
+.dm-meter{flex:1;height:6px;background:#232A35;border-radius:9px;overflow:hidden;max-width:260px}.dm-meter i{display:block;height:100%;width:0;background:#4CC38A;transition:width 1s ease}
+.dm-why{color:#C2C8D2;font-size:13.5px}.dm-lesson{background:#14261D;border:1px solid #1F4D33;border-radius:8px;padding:10px 12px;color:#C7F0D8;font-size:13.5px}
+[data-live="design"]{padding:20px;background:var(--paper)}.dw{display:grid;gap:12px}
+.dw-k{display:block;font:500 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.dw-req{font-size:15px;min-height:64px}.dw-type::after{content:"▍";color:var(--accent);animation:blink 1s infinite}
+.dw-qs{display:flex;flex-wrap:wrap;gap:6px}.dw-q{font-size:12.5px;padding:5px 10px;border-radius:999px;background:var(--soft);border:1px solid var(--line);animation:slidein .4s ease}
+.dw-r{font-size:14px;padding-left:14px;border-left:3px solid var(--accent);margin:4px 0;animation:slidein .4s ease}
+.dw-stack{display:grid;gap:4px}.dw-lane{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:8px 12px;border-radius:calc(var(--r)/2);background:var(--tint);font-size:13px;animation:slidein .4s ease}
+.dw-lane b{font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent-t)}
+.dw-docs{display:flex;flex-wrap:wrap;gap:6px}.dw-doc{font:500 12px var(--mono);padding:6px 10px;border-radius:6px;background:var(--ink);color:#fff;animation:slidein .4s ease}
+[data-live="bench"]{padding:22px}.bn-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.bn-card{border:1px solid var(--line);border-radius:calc(var(--r)/1.5);padding:12px;font-size:13.5px;transition:all .5s ease;background:var(--paper)}
+.bn-card.merge{transform:scale(.96);border-color:var(--accent);background:var(--tint)}.bn-card.fade{opacity:.25;filter:grayscale(1)}
+.bn-k{display:block;font:500 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.bn-out{margin-top:14px;display:grid;gap:10px}.bn-hint{color:var(--muted);font-size:14px}
+.bn-pr,.bn-re{border-radius:var(--r);padding:16px 18px;animation:slidein .5s ease}.bn-pr{background:var(--ink);color:#fff}.bn-pr .bn-k{color:#AEB4BF}.bn-pr b{font-family:var(--head);font-size:20px;font-weight:600}
+.bn-re{background:var(--tint);border-left:4px solid var(--accent)}
+@media (max-width:980px){.hero-grid{grid-template-columns:1fr}[data-live="graph"]{grid-template-columns:1fr}.graph-info{border-left:0;border-top:1px solid var(--line)}
+.desk-body{grid-template-columns:1fr}.desk-side{display:none}.bn-cards{grid-template-columns:repeat(2,1fr)}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style></head><body>
+</style><script>window.LIVE={"names": {"design": "Ridgeline Design", "ontology": "Ridgeline Ontology", "pragma": "Ridgeline Pragma", "engram": "Ridgeline Engram"}, "company": "Ridgeline Operations", "people": "pit supervisors and maintenance crews", "objects": ["haul truck", "shovel", "haul road", "proximity event", "work order"], "asset": "haul truck", "work": "work order", "alert": "proximity event", "design": "a haul road safety system for an open pit mine", "customer": "Open pit copper operations and semiconductor fabs in Arizona that need models trained on their own process data and run inside their perimeter.", "accent": "#C2410C", "mono": "IBM Plex Mono", "body": "Barlow", "places": ["A mining site in Arizona", "A site on a satellite link", "A site with a new regulator"]}</script><script src="../live.js" defer></script></head><body>
 <div class="ribbon">Demo company, built to show Infinity</div>
 <nav class="top" aria-label="Main"><div class="wrap"><a href="../" aria-label="Ridgeline Operations home" style="text-decoration:none"><img src="../logo.png" alt="Ridgeline Operations" class="logo"></a>
 <div class="links"><a href="../ridgeline-design/" class="">Ridgeline Design</a><a href="../ridgeline-ontology/" class="">Ridgeline Ontology</a><a href="../ridgeline-pragma/" class="">Ridgeline Pragma</a><a href="../ridgeline-engram/" class="">Ridgeline Engram</a><a href="../insights/" class="">Insights</a><a href="../about/" class="on">About</a></div><a class="btn" href="mailto:hello@ridgeline-ops.example?subject=Request%20a%20deployment">Request a deployment</a></div></nav>
-<main><header class="hero"><div class="wrap"><div class="eb">About · Phoenix, Arizona</div>
+<main><header class="hero vid"><video class="bgv" data-bg autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="https://muhammadumar89.github.io/infinity/media/aerial_drone_aerial_18563093.mp4" type="video/mp4"></video><div class="bgv-shade"></div><div class="wrap"><div class="eb">About · Phoenix, Arizona</div>
 <h1>Why we started Ridgeline Operations.</h1><p class="lede">Sovereign AI for the mines and fabs of the Southwest</p></div></header>
 <section><div class="wrap split"><div class="prose"><p>The Southwest is building fabs and reopening mines faster than it can train the engineers to run them.</p><p>Ridgeline gives those operations AI they own, trained on their own process, so every shift makes the next one better.</p><h3>Who we serve</h3><p>Open pit copper operations and semiconductor fabs in Arizona that need models trained on their own process data and run inside their perimeter.</p>
 <h3>Why us</h3><p>I have stood on the haul road and in the clean room. Ridgeline builds for operators who are measured in tonnes and in yield, not in dashboards.</p></div>
