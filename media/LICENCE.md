@@ -29,3 +29,5 @@ redistributed as stock, and no claim is made about the people, places or compani
 - `warehouse_close_10472349.mp4`: Woman Scanning Parcels. Thanh Van (https://www.pexels.com/video/woman-scanning-parcels-10472349/)
 - `warehouse_close_10472351.mp4`: Close up on Parcels on Sorting Lane. Thanh Van (https://www.pexels.com/video/close-up-on-parcels-on-sorting-lane-10472351/)
 - `wind_renewables_aerial_13198260.mp4`: Solar Panels on Solar Farm. K (https://www.pexels.com/video/solar-panels-on-solar-farm-13198260/)
+
+Stills in `stills/` are single frames taken from the clips above (same licence). Photos in `photos/` are Pexels License photos from the Praxis photo library (assets_media/photos/manifest.json): ph-office-int-07, ph-server-03, ph-server-01.
