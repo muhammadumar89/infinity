@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About · Ridgeline Operations</title><meta name="description" content="About Ridgeline Operations">
+<meta property="og:title" content="About · Ridgeline Operations"><meta property="og:description" content="About Ridgeline Operations">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#C2410C;--accent-t:#C2410C;--on:#FFFFFF;--ink:#121417;--ink2:#3D4450;--muted:#6B7280;
+--paper:#FFFFFF;--soft:#F2F2EF;--line:#E2E5EA;--tint:#F9ECE7;--r:3px;
+--head:"Barlow Condensed",system-ui,sans-serif;--body:"Barlow",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+--hero-bg:#121417;--hero-fg:#F4F5F7;--hero-sub:#C4C9D2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}img{max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:24px}
+h1,h2,h3,h4{font-family:var(--head);font-weight:600;text-transform:uppercase;letter-spacing:.01em;text-wrap:balance}
+.ribbon{background:var(--ink);color:#fff;font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:8px 16px}
+nav.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:22px;height:66px}
+.logo{height:34px;width:auto;display:block}.wm{font-family:var(--head);font-weight:700;font-size:20px;text-decoration:none}
+.links{display:flex;gap:20px;margin-left:auto;font-size:14.5px;color:var(--ink2)}.links a{text-decoration:none}.links a:hover,.links a.on{color:var(--accent-t)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--on);text-decoration:none;font-weight:600;font-size:15px;padding:12px 20px;border-radius:var(--r);border:1px solid var(--accent);white-space:nowrap}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+a:focus-visible,.btn:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.hero{background:var(--hero-bg);color:var(--hero-fg);position:relative;overflow:hidden;padding-block:92px 84px}
+.hero .tex{position:absolute;inset:0;width:100%;height:100%}
+.hero .wrap{position:relative}
+.eb{font:500 12.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-t)}
+.hero .eb{color:#C4C9D2}
+.hero h1{font-size:clamp(38px,6vw,72px);line-height:1.03;margin:16px 0 20px;max-width:17ch}
+.hero p.lede{font-size:clamp(18px,2vw,21px);color:var(--hero-sub);max-width:60ch;margin:0 0 32px}
+.facts{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:34px}
+.facts div{font-size:14px;color:var(--hero-sub)}.facts b{display:block;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--hero-fg);opacity:.75;margin-bottom:2px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+section{padding-block:84px}section.alt{background:var(--soft)}
+h2{font-size:clamp(30px,4vw,48px);line-height:1.1;margin:10px 0 16px;max-width:24ch}
+.sub{color:var(--ink2);max-width:64ch;margin:0 0 38px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.cards.four{grid-template-columns:repeat(4,1fr)}@media (max-width:1100px){.cards.four{grid-template-columns:repeat(2,1fr)}}@media (max-width:560px){.cards.four{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px;text-decoration:none;display:flex;flex-direction:column;gap:8px}
+a.card:hover{border-color:var(--accent)}
+.card .k{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.card h3{margin:0;font-size:24px;color:var(--accent-t)}.card p{margin:0;color:var(--ink2);font-size:15.5px}
+.card .more{margin-top:auto;font-size:14px;font-weight:600;color:var(--accent-t)}
+.lead-tag{align-self:flex-start;font:600 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;background:var(--accent);color:var(--on);padding:3px 8px;border-radius:999px}
+ol.steps{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+ol.steps li{display:grid;grid-template-columns:70px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.sn{font:500 14px var(--mono);color:var(--accent-t);padding-top:5px}ol.steps h4{margin:0 0 4px;font-size:20px}ol.steps p{margin:0;color:var(--ink2)}
+.loop{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.loop a{background:var(--paper);padding:24px;text-decoration:none}.loop .k{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-t)}
+.loop h4{margin:8px 0 6px;font-size:21px}.loop p{margin:0;font-size:15px;color:var(--ink2)}
+.example{border-left:4px solid var(--accent);background:var(--tint);padding:22px 26px;border-radius:0 var(--r) var(--r) 0;font-size:18px;max-width:78ch}
+.example b{display:block;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-t);margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.chip{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:8px 15px;font-size:14.5px}
+.split{display:grid;grid-template-columns:1.15fr 1fr;gap:52px;align-items:start}
+.prose p{color:var(--ink2);margin:0 0 16px}.prose h3{font-size:26px;margin:28px 0 8px}
+.quote{font-family:var(--head);font-size:clamp(22px,2.4vw,30px);line-height:1.3;border-left:4px solid var(--accent);padding-left:22px;margin:0;text-transform:none;letter-spacing:-.01em}
+.svs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.sv{border:1px solid var(--line);border-radius:var(--r);padding:20px;background:var(--paper)}.sv h4{margin:0 0 6px;font-size:18px}.sv p{margin:0;font-size:15px;color:var(--ink2)}
+.founder{border:1px solid var(--line);border-radius:var(--r);padding:26px;background:var(--paper)}
+.founder .nm{font-family:var(--head);font-size:24px;font-weight:600}.founder .tt{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:4px 0 12px}
+details{border-bottom:1px solid var(--line);padding:16px 0}summary{cursor:pointer;font-family:var(--head);font-size:19px;font-weight:600;list-style:none}
+summary::after{content:"+";float:right;color:var(--accent-t)}details[open] summary::after{content:"−"}details p{color:var(--ink2);margin:10px 0 0}
+.band{background:var(--ink);color:#F4F5F7}.band h2{max-width:20ch}.band p{color:#C4C9D2}
+.band .grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:end}
+.band .lines{display:grid;gap:6px;color:#C4C9D2}.band .lines a{color:#fff}
+footer{background:var(--ink);color:#8C93A1;border-top:1px solid rgba(255,255,255,.08);font-size:13.5px}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px;padding-block:40px 28px}
+footer h5{margin:0 0 10px;color:#fff;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+footer a{display:block;text-decoration:none;padding:3px 0}footer a:hover{color:#fff}
+footer .base{grid-column:1/-1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid rgba(255,255,255,.08);padding-top:18px}
+@media (max-width:1020px){.loop{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:860px){.links{display:none}.split{grid-template-columns:1fr}footer .wrap{grid-template-columns:1fr}
+.hero{padding-block:64px 58px}section{padding-block:62px}ol.steps li{grid-template-columns:48px 1fr}}
+@media (max-width:560px){.loop{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<div class="ribbon">Demo company, built to show Infinity</div>
+<nav class="top" aria-label="Main"><div class="wrap"><a href="../" aria-label="Ridgeline Operations home" style="text-decoration:none"><img src="../logo.png" alt="Ridgeline Operations" class="logo"></a>
+<div class="links"><a href="../ridgeline-design/" class="">Ridgeline Design</a><a href="../ridgeline-ontology/" class="">Ridgeline Ontology</a><a href="../ridgeline-pragma/" class="">Ridgeline Pragma</a><a href="../ridgeline-engram/" class="">Ridgeline Engram</a><a href="../insights/" class="">Insights</a><a href="../about/" class="on">About</a></div><a class="btn" href="mailto:hello@ridgeline-ops.example?subject=Request%20a%20deployment">Request a deployment</a></div></nav>
+<main><header class="hero"><div class="wrap"><div class="eb">About · Phoenix, Arizona</div>
+<h1>Why we started Ridgeline Operations.</h1><p class="lede">Sovereign AI for the mines and fabs of the Southwest</p></div></header>
+<section><div class="wrap split"><div class="prose"><p>The Southwest is building fabs and reopening mines faster than it can train the engineers to run them.</p><p>Ridgeline gives those operations AI they own, trained on their own process, so every shift makes the next one better.</p><h3>Who we serve</h3><p>Open pit copper operations and semiconductor fabs in Arizona that need models trained on their own process data and run inside their perimeter.</p>
+<h3>Why us</h3><p>I have stood on the haul road and in the clean room. Ridgeline builds for operators who are measured in tonnes and in yield, not in dashboards.</p></div>
+<div class="founder"><div class="nm">Priya Natarajan</div><div class="tt">Founder</div><p style="margin:0;color:var(--ink2)">Process engineer turned operations lead at copper mines in Arizona and Chile, then three years on yield in a semiconductor fab in Chandler.</p></div></div></section>
+<section class="band"><div class="wrap grid"><div><div class="eb" style="color:#C4C9D2">Request a deployment</div>
+<h2>Tell us about your operation.</h2><a class="btn" href="mailto:hello@ridgeline-ops.example?subject=Request%20a%20deployment">Request a deployment</a></div>
+<div class="lines"><a href="mailto:hello@ridgeline-ops.example">hello@ridgeline-ops.example</a><span>Phoenix, Arizona</span></div></div></section></main>
+<footer><div class="wrap">
+<div><h5>Ridgeline Operations</h5><p style="margin:0;max-width:44ch">Sovereign AI for the mines and fabs of the Southwest</p></div>
+<div><h5>Platform</h5><a href="../ridgeline-design/">Ridgeline Design</a><a href="../ridgeline-ontology/">Ridgeline Ontology</a><a href="../ridgeline-pragma/">Ridgeline Pragma</a><a href="../ridgeline-engram/">Ridgeline Engram</a></div>
+<div><h5>Company</h5><a href="../insights/">Insights</a><a href="../about/">About</a><a href="mailto:hello@ridgeline-ops.example">hello@ridgeline-ops.example</a><span style="display:block;padding:3px 0">Phoenix, Arizona</span></div>
+<div class="base"><span>&copy; 2026 Ridgeline Operations</span><span>Built on CodeNinja</span></div>
+</div></footer></body></html>
