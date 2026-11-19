@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skyward Engram · Skyward MRO Intelligence</title><meta name="description" content="Skyward Engram: Train sovereign AI models in their weights and in their memory.">
+<meta property="og:title" content="Skyward Engram · Skyward MRO Intelligence"><meta property="og:description" content="Skyward Engram: Train sovereign AI models in their weights and in their memory.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#5B3FD9;--accent-t:#5B3FD9;--on:#FFFFFF;--ink:#14121C;--ink2:#3D4450;--muted:#6B7280;
+--paper:#FFFFFF;--soft:#F4F3F8;--line:#E2E5EA;--tint:#EFECFB;--r:6px;
+--head:"Sora",system-ui,sans-serif;--body:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+--hero-bg:#EFECFB;--hero-fg:#14121C;--hero-sub:#3D4450}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}img{max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:24px}
+h1,h2,h3,h4{font-family:var(--head);font-weight:600;text-transform:none;letter-spacing:-.02em;text-wrap:balance}
+.ribbon{background:var(--ink);color:#fff;font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:8px 16px}
+nav.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:22px;height:66px}
+.logo{height:34px;width:auto;display:block}.wm{font-family:var(--head);font-weight:700;font-size:20px;text-decoration:none}
+.links{display:flex;gap:20px;margin-left:auto;font-size:14.5px;color:var(--ink2)}.links a{text-decoration:none}.links a:hover,.links a.on{color:var(--accent-t)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--on);text-decoration:none;font-weight:600;font-size:15px;padding:12px 20px;border-radius:var(--r);border:1px solid var(--accent);white-space:nowrap}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+a:focus-visible,.btn:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.hero{background:var(--hero-bg);color:var(--hero-fg);position:relative;overflow:hidden;padding-block:92px 84px}
+.hero .tex{position:absolute;inset:0;width:100%;height:100%}
+.hero .wrap{position:relative}
+.eb{font:500 12.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-t)}
+.hero .eb{color:#5B3FD9}
+.hero h1{font-size:clamp(38px,6vw,72px);line-height:1.03;margin:16px 0 20px;max-width:17ch}
+.hero p.lede{font-size:clamp(18px,2vw,21px);color:var(--hero-sub);max-width:60ch;margin:0 0 32px}
+.facts{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:34px}
+.facts div{font-size:14px;color:var(--hero-sub)}.facts b{display:block;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--hero-fg);opacity:.75;margin-bottom:2px}.hero.vid .facts div{color:#D0D4DB}.hero.vid .facts b{color:#fff}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+section{padding-block:84px}section.alt{background:var(--soft)}
+h2{font-size:clamp(30px,4vw,48px);line-height:1.1;margin:10px 0 16px;max-width:24ch}
+.sub{color:var(--ink2);max-width:64ch;margin:0 0 38px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.cards.four{grid-template-columns:repeat(4,1fr)}@media (max-width:1100px){.cards.four{grid-template-columns:repeat(2,1fr)}}@media (max-width:560px){.cards.four{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px;text-decoration:none;display:flex;flex-direction:column;gap:8px}
+a.card:hover{border-color:var(--accent)}
+.card .k{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.card h3{margin:0;font-size:24px;color:var(--accent-t)}.card p{margin:0;color:var(--ink2);font-size:15.5px}
+.card .more{margin-top:auto;font-size:14px;font-weight:600;color:var(--accent-t)}
+.lead-tag{align-self:flex-start;font:600 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;background:var(--accent);color:var(--on);padding:3px 8px;border-radius:999px}
+ol.steps{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+ol.steps li{display:grid;grid-template-columns:70px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.sn{font:500 14px var(--mono);color:var(--accent-t);padding-top:5px}ol.steps h4{margin:0 0 4px;font-size:20px}ol.steps p{margin:0;color:var(--ink2)}
+.loop{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.loop a{background:var(--paper);padding:24px;text-decoration:none}.loop .k{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-t)}
+.loop h4{margin:8px 0 6px;font-size:21px}.loop p{margin:0;font-size:15px;color:var(--ink2)}
+.example{border-left:4px solid var(--accent);background:var(--tint);padding:22px 26px;border-radius:0 var(--r) var(--r) 0;font-size:18px;max-width:78ch}
+.example b{display:block;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-t);margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.chip{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:8px 15px;font-size:14.5px}
+.split{display:grid;grid-template-columns:1.15fr 1fr;gap:52px;align-items:start}
+.prose p{color:var(--ink2);margin:0 0 16px}.prose h3{font-size:26px;margin:28px 0 8px}
+.quote{font-family:var(--head);font-size:clamp(22px,2.4vw,30px);line-height:1.3;border-left:4px solid var(--accent);padding-left:22px;margin:0;text-transform:none;letter-spacing:-.01em}
+.svs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.sv{border:1px solid var(--line);border-radius:var(--r);padding:20px;background:var(--paper)}.sv h4{margin:0 0 6px;font-size:18px}.sv p{margin:0;font-size:15px;color:var(--ink2)}
+.founder{border:1px solid var(--line);border-radius:var(--r);padding:26px;background:var(--paper)}
+.founder .nm{font-family:var(--head);font-size:24px;font-weight:600}.founder .tt{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:4px 0 12px}
+details{border-bottom:1px solid var(--line);padding:16px 0}summary{cursor:pointer;font-family:var(--head);font-size:19px;font-weight:600;list-style:none}
+summary::after{content:"+";float:right;color:var(--accent-t)}details[open] summary::after{content:"−"}details p{color:var(--ink2);margin:10px 0 0}
+.band{background:var(--ink);color:#F4F5F7}.band h2{max-width:20ch}.band p{color:#C4C9D2}
+.band .grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:end}
+.band .lines{display:grid;gap:6px;color:#C4C9D2}.band .lines a{color:#fff}
+footer{background:var(--ink);color:#8C93A1;border-top:1px solid rgba(255,255,255,.08);font-size:13.5px}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px;padding-block:40px 28px}
+footer h5{margin:0 0 10px;color:#fff;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+footer a{display:block;text-decoration:none;padding:3px 0}footer a:hover{color:#fff}
+footer .base{grid-column:1/-1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid rgba(255,255,255,.08);padding-top:18px}
+@media (max-width:1020px){.loop{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:860px){.links{display:none}.split{grid-template-columns:1fr}footer .wrap{grid-template-columns:1fr}
+.hero{padding-block:64px 58px}section{padding-block:62px}ol.steps li{grid-template-columns:48px 1fr}}
+@media (max-width:560px){.loop{grid-template-columns:1fr}}
+.js .rv.pre{opacity:0;transform:translateY(16px)}.js .rv.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}
+.hero.vid{background:#07090C;color:#F4F5F7}.hero.vid .eb{color:#D7DBE2}.hero.vid p.lede{color:#D0D4DB}
+.bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.bgv-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,9,12,.92) 0%,rgba(7,9,12,.72) 45%,rgba(7,9,12,.35) 100%)}
+.hud{position:absolute;top:16px;right:20px;font:500 11px var(--mono);letter-spacing:.12em;color:#E8EBF0;display:flex;align-items:center;gap:8px;z-index:2}
+.hud .rec{width:8px;height:8px;border-radius:50%;background:#E5484D;animation:blink 1.4s infinite}@keyframes blink{50%{opacity:.2}}
+.hud .tc{opacity:.8;margin-left:6px}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:center}
+.panel{background:rgba(12,15,20,.72);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:16px 18px;backdrop-filter:blur(6px);color:#E8EBF0}
+.panel .pk{font:500 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#AEB4BF;display:flex;justify-content:space-between}
+.feed-list{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px;min-height:252px}
+.feed-list li{display:grid;grid-template-columns:62px 58px 1fr;gap:8px;font-size:13px;line-height:1.35;animation:slidein .5s ease}
+@keyframes slidein{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.feed-list .ft{font:12px var(--mono);color:#8E95A2}.feed-list .fk{font:600 10px var(--mono);letter-spacing:.08em;padding-top:2px}
+.k-sense .fk{color:#F5A524}.k-agent .fk{color:var(--accent)}.k-human .fk{color:#4CC38A}.k-learn .fk{color:#B392F0}
+.illus{font:500 11px var(--mono);letter-spacing:.06em;color:var(--muted);margin-top:10px}
+.livebox{border:1px solid var(--line);border-radius:var(--r);background:var(--paper);overflow:hidden;box-shadow:0 18px 50px -24px rgba(0,0,0,.25)}
+[data-live="graph"]{position:relative;display:grid;grid-template-columns:1fr 260px;min-height:420px;color:var(--ink);background:var(--paper)}
+.graph-cv{width:100%;height:420px;cursor:pointer}.graph-info{border-left:1px solid var(--line);padding:18px;font-size:14px;background:var(--soft)}
+.gi-k{font:500 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:12px}.gi-k:first-child{margin-top:0}
+.gi-n{font-family:var(--head);font-size:24px;color:var(--accent-t)}.gi-v{color:var(--ink2);margin-top:2px}
+[data-live="kinetics"]{padding:22px}.kin-head{font-size:15px;color:var(--ink2);margin-bottom:12px}.kin-head b{color:var(--ink)}
+.kin-states{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.kin-s{font:500 12px var(--mono);padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.kin-s.on{background:var(--accent);color:var(--on);border-color:var(--accent)}
+.kin-btns,.bn-btns{display:flex;flex-wrap:wrap;gap:8px}
+.kin-b{font:600 13.5px var(--body);padding:9px 14px;border-radius:var(--r);border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer}
+.kin-b.ghost{background:var(--paper);color:var(--ink);border-color:var(--line)}.kin-b:disabled{opacity:.4;cursor:not-allowed}
+.kin-log{margin-top:14px;display:grid;gap:6px;font-size:14px}.kin-log .ok{color:#1F7A4D}.kin-log .bad{color:#B42318}
+[data-live="desk"]{min-height:480px;background:#0F1319;color:#E6E9EE;border-radius:var(--r);overflow:hidden;font-size:14px}
+.desk-top{display:flex;align-items:center;gap:8px;padding:10px 14px;background:#161B23;border-bottom:1px solid #232A35}
+.desk-top .dot{width:10px;height:10px;border-radius:50%}.dot.r{background:#E5484D}.dot.y{background:#F5A524}.dot.g{background:#4CC38A}
+.desk-title{margin-left:8px;font-weight:600}.desk-mem{margin-left:auto;font:500 11px var(--mono);color:#4CC38A}
+.desk-body{display:grid;grid-template-columns:220px 1fr;min-height:430px}
+.desk-side{border-right:1px solid #232A35;padding:12px}.ds-k{font:500 10.5px var(--mono);letter-spacing:.12em;color:#8E95A2;margin-bottom:8px}
+.ds-row{display:flex;justify-content:space-between;padding:8px 10px;border-radius:6px;font-size:13px;color:#C2C8D2}.ds-row span{font:11px var(--mono);color:#7D8592}
+.ds-row.on{background:#1E2530;color:#fff;box-shadow:inset 3px 0 0 var(--accent)}
+.desk-main{padding:16px 18px}.dm-feed{display:grid;gap:8px}
+.dm-ask{background:#1A2029;border-radius:8px;padding:10px 12px}.dm-who{display:block;font:600 11px var(--mono);color:var(--accent);margin-bottom:4px}
+.dm-step{font:12.5px var(--mono);color:#AEB4BF;padding-left:18px;position:relative;animation:slidein .4s ease}
+.dm-step::before{content:"";position:absolute;left:2px;top:6px;width:7px;height:7px;border-radius:50%;border:1.5px solid #6B7380}
+.dm-step.done::before{background:#4CC38A;border-color:#4CC38A}
+.dm-out{font:600 13px var(--mono);color:#fff;border-top:1px solid #232A35;padding-top:8px}
+.dm-grade{display:flex;align-items:center;gap:10px}.dm-k{font:500 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#8E95A2;margin-right:6px}
+.dm-meter{flex:1;height:6px;background:#232A35;border-radius:9px;overflow:hidden;max-width:260px}.dm-meter i{display:block;height:100%;width:0;background:#4CC38A;transition:width 1s ease}
+.dm-why{color:#C2C8D2;font-size:13.5px}.dm-lesson{background:#14261D;border:1px solid #1F4D33;border-radius:8px;padding:10px 12px;color:#C7F0D8;font-size:13.5px}
+[data-live="design"]{padding:20px;background:var(--paper);min-height:600px}.dw{display:grid;gap:12px}
+.dw-k{display:block;font:500 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.dw-req{font-size:15px;min-height:64px}.dw-type::after{content:"▍";color:var(--accent);animation:blink 1s infinite}
+.dw-qs{display:flex;flex-wrap:wrap;gap:6px}.dw-q{font-size:12.5px;padding:5px 10px;border-radius:999px;background:var(--soft);border:1px solid var(--line);animation:slidein .4s ease}
+.dw-r{font-size:14px;padding-left:14px;border-left:3px solid var(--accent);margin:4px 0;animation:slidein .4s ease}
+.dw-stack{display:grid;gap:4px}.dw-lane{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:8px 12px;border-radius:calc(var(--r)/2);background:var(--tint);font-size:13px;animation:slidein .4s ease}
+.dw-lane b{font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent-t)}
+.dw-docs{display:flex;flex-wrap:wrap;gap:6px}.dw-doc{font:500 12px var(--mono);padding:6px 10px;border-radius:6px;background:var(--ink);color:#fff;animation:slidein .4s ease}
+[data-live="bench"]{padding:22px}.bn-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.bn-card{border:1px solid var(--line);border-radius:calc(var(--r)/1.5);padding:12px;font-size:13.5px;transition:all .5s ease;background:var(--paper)}
+.bn-card.merge{transform:scale(.96);border-color:var(--accent);background:var(--tint)}.bn-card.fade{opacity:.25;filter:grayscale(1)}
+.bn-k{display:block;font:500 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.bn-out{margin-top:14px;display:grid;gap:10px}.bn-hint{color:var(--muted);font-size:14px}
+.bn-pr,.bn-re{border-radius:var(--r);padding:16px 18px;animation:slidein .5s ease}.bn-pr{background:var(--ink);color:#fff}.bn-pr .bn-k{color:#AEB4BF}.bn-pr b{font-family:var(--head);font-size:20px;font-weight:600}
+.bn-re{background:var(--tint);border-left:4px solid var(--accent)}
+@media (max-width:980px){.hero-grid{grid-template-columns:1fr}[data-live="graph"]{grid-template-columns:1fr}.graph-info{border-left:0;border-top:1px solid var(--line)}
+.desk-body{grid-template-columns:1fr}.desk-side{display:none}.bn-cards{grid-template-columns:repeat(2,1fr)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style><script>window.LIVE={"names": {"design": "Skyward Design", "ontology": "Skyward Ontology", "pragma": "Skyward Pragma", "engram": "Skyward Engram"}, "company": "Skyward MRO Intelligence", "people": "inspectors and MRO planners", "objects": ["aircraft", "component", "inspection finding", "work card", "part"], "asset": "component", "work": "work card", "alert": "inspection finding", "design": "a component inspection system for an MRO shop", "customer": "Part 145 repair stations and aerospace component shops in Kansas, Oklahoma and Texas with 50 to 800 technicians, still running inspection on paper work cards.", "accent": "#5B3FD9", "mono": "IBM Plex Mono", "body": "IBM Plex Sans", "places": ["A aviation site in Kansas", "A site on a satellite link", "A site with a new regulator"]}</script><script src="../live.js" defer></script></head><body>
+<div class="ribbon">Demo company, built to show Infinity</div>
+<nav class="top" aria-label="Main"><div class="wrap"><a href="../" aria-label="Skyward MRO Intelligence home" style="text-decoration:none"><img src="../logo.png" alt="Skyward MRO Intelligence" class="logo"></a>
+<div class="links"><a href="../skyward-design/" class="">Skyward Design</a><a href="../skyward-ontology/" class="">Skyward Ontology</a><a href="../skyward-pragma/" class="">Skyward Pragma</a><a href="../skyward-engram/" class="on">Skyward Engram</a><a href="../insights/" class="">Insights</a><a href="../about/" class="">About</a></div><a class="btn" href="mailto:hello@skyward-mro.example?subject=Request%20a%20deployment">Request a deployment</a></div></nav>
+<main>
+<header class="hero vid"><video class="bgv" data-bg autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="https://muhammadumar89.github.io/infinity/media/industrial_generic_close_32386532.mp4" type="video/mp4"></video><div class="bgv-shade"></div><div class="hud" aria-hidden="true"><span class="rec"></span>LIVE · Skyward Engram<span class="tc" data-tc></span></div><div class="wrap">
+<div class="eb">Sovereign models that learn from every run</div><h1>Skyward Engram</h1>
+<p class="lede"><strong style="color:#fff;font-weight:600">Train sovereign AI models in their weights and in their memory.</strong> Skyward Engram turns the work an operation does into training signal for the open weight models it hosts. Runs, outcomes and corrections are captured, compressed into versioned principles and applied two ways: into the model&#x27;s weights, and into a memory the model reads at inference. Training data, weights and memory never leave the perimeter.</p>
+<div class="cta"><a class="btn" href="mailto:hello@skyward-mro.example?subject=Skyward Engram">Talk to us about Skyward Engram</a></div>
+<div class="facts"><div><b>Trains</b>Sovereign AI models</div><div><b>Into</b>Weights and memory</div><div><b>Runs</b>On premises and air gapped</div></div></div></header>
+<section><div class="wrap"><div class="eb">Compression bench</div><h2>Compress once. Reinflate anywhere.</h2><p class="sub">Eight raw learnings become one principle, which the model reinflates into designs for places it has never seen.</p><div class="livebox rv" data-live="bench"></div><div class="illus">Illustrative learnings and places.</div></div></section>
+<section><div class="wrap"><div class="eb">What it does</div><h2>What Skyward Engram gives the operation.</h2><div class="cards"><div class="card"><h3 style="font-size:21px">Capture</h3><p>Every run becomes training data: kept as an episode with its outcome, its feedback and the corrections a reviewer made.</p></div><div class="card"><h3 style="font-size:21px">Compress</h3><p>Daily routines distil raw learnings into versioned principles that cite their sources. Contradictions are resolved and what never mattered fades.</p></div><div class="card"><h3 style="font-size:21px">Train</h3><p>Curated episodes and principles become post training data for the open weight models the customer hosts, trained on the customer&#x27;s own hardware.</p></div><div class="card"><h3 style="font-size:21px">Reinflate</h3><p>The model reads the compressed memory and expands it into the problem in front of it: this site, these regulations, these people.</p></div></div></div></section>
+<section class="alt"><div class="wrap"><div class="eb">How it works</div><h2>How Skyward Engram works.</h2><ol class="steps"><li><span class="sn">01</span><div><h4>A run misses something</h4><p>A design senses a warning and never says who must act on it.</p></div></li><li><span class="sn">02</span><div><h4>A later reader files a gap</h4><p>What was missed, the fix, and a rule for next time, in the routine&#x27;s own terms.</p></div></li><li><span class="sn">03</span><div><h4>The routine reads before it acts</h4><p>The rule is now part of how it works, with no change to its code.</p></div></li><li><span class="sn">04</span><div><h4>The record closes</h4><p>The next loop checks the gap closed. A record still open is the first item of the next plan.</p></div></li></ol></div></section>
+<section><div class="wrap"><div class="eb">In aviation and aerospace manufacturing</div><div class="example"><b>For inspectors and MRO planners</b>Every correction inspectors and MRO planners make becomes a lesson the customer&#x27;s own models keep, in memory within hours and in the weights at the next training run.</div></div></section>
+<section><div class="wrap split"><div class="prose"><div class="eb">In depth</div><h3>Context is the moat</h3><p>Every operation can host the same open weight models. What compounds is context: what this operation learned, corrected and decided. Skyward Engram keeps it, so it survives the next model.</p><h3>Two training targets, one platform</h3><p>Stable skills used at volume are trained into the weights, where they are fastest and cheapest to serve. Knowledge that changes every month, regulations, equipment and procedures, is kept in memory, where it is current within hours, readable and reversible. When a stronger base model arrives, the memory carries over on day one and the training run is repeated on it.</p><h3>Rules every loop keeps</h3><p>Every claim stands on a source. Every writer has a separate verifier. Every release is reversible: a bad change is reverted by its own commit, a bad principle by its own version. Training data, weights and memory stay inside the perimeter.</p></div>
+<div><div class="sv" style="position:sticky;top:90px"><div class="eb">Where it runs</div><p style="margin-top:8px;font-size:16px">Inside the customer&#x27;s perimeter: on premises, in a private cloud or fully air gapped, on models the customer hosts. Dedicated inference for the customer&#x27;s sovereign models.</p></div></div></div></section>
+
+<section><div class="wrap"><div class="eb">Questions</div><h2>Questions about Skyward Engram.</h2><details><summary>What is compression and reinflation?</summary><p>Compression turns many observations into one small principle, resolving contradictions and dropping what never mattered. Reinflation is the model expanding that principle into a new situation.</p></details><details><summary>What goes into the weights and what into memory?</summary><p>Stable skills used at high volume go into the weights. Knowledge that changes with the operation stays in memory, current within hours and reversible.</p></details><details><summary>What happens when a better base model is released?</summary><p>It is swapped in. The memory carries over unchanged, and the curated training data is applied to the new base model.</p></details></div></section>
+<section class="alt"><div class="wrap"><div class="eb">The rest of the platform</div><h2>One system, four platforms.</h2><div class="cards"><a class="card" href="../skyward-design/"><span class="k">AI that designs physical AI systems</span><h3 style="font-size:21px">Skyward Design</h3><span class="more">Explore &rarr;</span></a><a class="card" href="../skyward-ontology/"><span class="k">The digital twin of the organisation, as code</span><h3 style="font-size:21px">Skyward Ontology</h3><span class="more">Explore &rarr;</span></a><a class="card" href="../skyward-pragma/"><span class="k">Agents that act inside the workflow</span><h3 style="font-size:21px">Skyward Pragma</h3><span class="more">Explore &rarr;</span></a></div></div></section>
+<section class="band"><div class="wrap grid"><div><div class="eb" style="color:#C4C9D2">Request a deployment</div>
+<h2>Put Skyward Engram to work on your operation.</h2><a class="btn" href="mailto:hello@skyward-mro.example?subject=Request%20a%20deployment">Request a deployment</a></div>
+<div class="lines"><a href="mailto:hello@skyward-mro.example">hello@skyward-mro.example</a><a href="tel:+13165550133">+1 316 555 0133</a><span>Wichita, Kansas</span></div></div></section></main>
+<footer><div class="wrap">
+<div><h5>Skyward MRO Intelligence</h5><p style="margin:0;max-width:44ch">Sovereign AI for the aircraft maintenance shops of the Midwest</p></div>
+<div><h5>Platform</h5><a href="../skyward-design/">Skyward Design</a><a href="../skyward-ontology/">Skyward Ontology</a><a href="../skyward-pragma/">Skyward Pragma</a><a href="../skyward-engram/">Skyward Engram</a></div>
+<div><h5>Company</h5><a href="../insights/">Insights</a><a href="../about/">About</a><a href="mailto:hello@skyward-mro.example">hello@skyward-mro.example</a><span style="display:block;padding:3px 0">Wichita, Kansas</span></div>
+<div class="base"><span>&copy; 2026 Skyward MRO Intelligence, LLC</span><span>Built on CodeNinja</span></div>
+</div></footer></body></html>
